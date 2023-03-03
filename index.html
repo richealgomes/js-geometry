@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>master geometry </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .convert-btn{
+        background-color: #15803d;
+        width: 110px;
+        height: 32px;
+        margin: 3px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+      }
+      #random-bg{
+        background-color:white ;
+      }
+    </style>
+</head>
+<body>
+    <header>
+      <!-- NavBar -->
+      <div class="navbar bg-base-100 bg-lime-300 px-8 flex m-20 p-5 rounded-lg flex flex-col md:flex-row lg:flex-row ">
+        <div class="flex-1">
+            <p><span class="font-bold text-3xl">Interactive</span> <br><span class="text-black-300 text-2xl">Geometric
+              Genius</span></p>
+
+        </div>
+        <div>
+            <button id="btn-submit"class="bg-lime-700 px-6 py-2 text-white font-medium block mt-4 rounded-lg  hover:bg-lime-900">Blog</button>
+          
+        </div>
+    </div>
+       <!-- NAVBAR end -->
+</header>
+<!-- header part making cards -->
+<main>
+  <section class="flex flex-col md:flex-row lg:flex-row">
+    <div  class="main-cards grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 mt-5 mx-20 sm:w-[70%] md:w-70% lg:w-70% gap-5 ">
+              <!-- card 1 -->
+              <div class=" card bg-base-100 border-lime-700 border-2 rounded-lg random-bg">
+                <figure class="px-10 pt-10">
+                  <img class="rounded-xl pb-2 mx-auto"src="./images/triangle.png" alt="triangle">
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 id="first-name"class="card-title text-2xl font-semibold pt-3">Triangle</h2>
+                  <p class="pb-4">Area (A)=0.5*b*h</p>
+                  
+                  <div>
+                   <p class="pb-4 pt-2"> <input id="fstCrdInput" class="border-2 border-black w-12 pl-3" type="text" placeholder="b"> cm
+                    <input id="fstCrdInput2" class="border-2 border-black w-12 pl-3 " type="text" placeholder="h"> cm</p>
+                    
+                  </div>
+                  <div class="card-actions">
+                    <button id="first-card" class="bg-lime-700 px-6 py-2 text-white text-xl font-medium  mx-auto  rounded-lg  hover:bg-lime-900 text-white mb-4 w-[90%]">calculate</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 2 -->
+              <div class="card bg-base-100 border-lime-700 border-2 rounded-lg random-bg2">
+                <figure class="px-10 pt-10">
+                  <img class="pb-4 mx-auto"src="./images/rectangle.png" alt="" srcset="">
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 id="second-name" class="card-title text-2xl font-semibold pt-3">Rectangle</h2>
+                  <p class="pb-4">Area (A)=W*l</p>
+                  <div>
+                   <p class="pb-4 pt-2"> <input  id="secondCrdInput"class="border-2 border-black pl-3 w-12 " type="text" placeholder="w"> cm
+                    
+                    <input id="secondCrdInput2" class="border-2 border-black w-12 pl-3 " type="text" placeholder="l"> cm</p>
+                    
+                  </div>
+                  <div class="card-actions">
+                    <button id="second-card" class="bg-lime-700 px-6 py-2 text-white font-medium  mx-auto  rounded-lg  hover:bg-lime-900 text-white mb-4 w-[90%]">calculate</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 3 -->
+              <div class="card bg-base-100 border-lime-700 border-2 rounded-lg random-bg3">
+                <figure class="px-10 pt-10">
+                  <img class="pb-4 pt-3 mx-auto" src="./images/parallelogram.png" alt="" srcset="">
+                </figure>
+                <div class="card-body items-center text-center pt-3">
+                  <h2 id="third-name" class="card-title text-2xl font-semibold">Parallelogram</h2>
+                  <p class="pb-2">Area (A)=b*h</p>
+                  <p class="pb-2">b=10cm, h=12cm</p>
+                  <div>
+                   <p class="pb-4"> <input  id="thirdCrdInput"class="border-2 border-black w-12 pl-3" type="text" placeholder="b"> cm
+                    
+                    <input id="thirdCrdInput2" class="border-2 border-black w-12 pl-3  " type="text" placeholder="h"> cm</p>
+                    
+                  </div>
+                  <div class="card-actions">
+                    <button id="third-card" class="bg-lime-700 px-6 py-2 text-white text-xl font-medium  mx-auto  rounded-lg  hover:bg-lime-900 text-white mb-4 w-[90%]">calculate</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 4 -->
+              <div class="card bg-base-100 border-lime-700 border-2 rounded-lg random-bg4">
+                <figure class="px-10 pt-10">
+                  <img class="pb-2 pt-2 mx-auto" src="./images/rhombus.png" alt="" srcset="">
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 id="forth-name" class="card-title text-2xl font-semibold">rhombus</h2>
+                  <p class="pb-2">Area (A)=0.5*d<sub>1</sub>*d<sub>2</sub></p>
+                  <p class="pb-2">d<sup>1</sup>=16cm , d<sup>2</sup>=8cm</p>
+                  <div>
+                   <p class="pb-4"> <input  id="forthCrdInput" class="border-2 border-black w-12 pl-3" type="text" placeholder="d1" >cm
+                    
+                    <input id="forthCrdInput2" class="border-2 border-black w-12 pl-3" type="text" placeholder="d2"> cm</p>
+                    
+                  </div>
+                  <div class="card-actions">
+                    <button id="forth-card" class="bg-lime-700 px-6 py-2 text-white text-xl font-medium  mx-auto  rounded-lg  hover:bg-lime-900 text-white mb-4 w-[90%]">calculate</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 5 -->
+            <div class="card  bg-base-100 border-lime-700 border-2 w-full rounded-lg random-bg5">
+                <figure class="px-10 pt-10">
+                  <img class="pb-2  mx-auto" src="./images/pentagon.png" alt="" srcset="">
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 id="fifth-name" class="card-title text-2xl font-semibold pt-3">Pentagon</h2>
+                  <p class="pb-2">Area (A)=0.5*p*b</p>
+                  <p class="pb-2">p = 6cm, b = 10cm</p>
+                  <div>
+                   <p class="pb-4"> <input  id="fifthCrdInput"class="border-2 pl-3 border-black w-12" type="text" placeholder="p"> cm
+                    
+                    <input id="fifthCrdInput2" class="border-2 border-black w-12 pl-3" type="text" placeholder="b"> cm</p>
+                    
+                  </div>
+                  <div class="card-actions">
+                    <button id="fifth-card" class="bg-lime-700 px-6 py-2 text-white text-xl font-medium  mx-auto  rounded-lg  hover:bg-lime-900 text-white mb-4 w-[90%]">calculate</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 6 -->
+              <div class="card  bg-base-100 border-lime-700 border-2 w-full rounded-lg bg-white-200 random-bg6">
+                <figure class="px-10 pt-10">
+                  <img class="pb-4 mx-auto" src="./images/ellipse.png" alt="" srcset="">
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 id="sixth-name" class="card-title text-2xl font-semibold pt-3">Ellipse</h2>
+                  <p class="pb-2">Area (A)=πab</p>
+                  <p class="pb-2">a = 10cm, b = 4cm</p>
+                  <div>
+                   <p class="pb-4"> <input  id="sixthCrdInput" class="border-2 pl-3 border-black w-12" type="text" placeholder="a">cm
+                    <input id="sixthCrdInput2" class="border-2 pl-3 border-black w-12 " type="text" placeholder="b"> cm</p>
+                  </div>
+                  <div class="card-actions">
+                    <button id="sixth-card" class="bg-lime-700 px-6 py-2 text-white text-xl font-medium  mx-auto  rounded-lg  hover:bg-lime-900 text-white mb-4 w-[90%]">calculate</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- calculation answer part (table) -->
+            <div class="mt-5 mx-auto lg:ml-5 border-lime-700 border-2  sm:w-[30%] md:w-[30%] lg:w-[30%] h-80 mr-20 rounded-lg">
+              <h2 class="text-2xl font-semibold px-10 pt-5 text-center underline">area calculation
+              </h2>
+              <div class="over-x-auto p-5">
+                <table class="table w-full sm:mx-auto">
+                  <tbody id="table-container"class="text-center">
+                    <!-- <tr>
+                      <td></td>
+                      <td></td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
+              </div>
+            
+    </section>
+</main>
+<script src="./js/geometry.js"></script>
+</body>
+</html>
